@@ -1,27 +1,34 @@
+
 // Define color palette
 $primary: #1a90be;
 $success: #2A9D8F;
 $info: #E9C46A;
-$warning: #F4A261;
-$danger: #E76F51;
+$warning: #b9a02f;
+$danger: #E76F51;   
 $light: #a3c2c7;
-$card-cap-bg: #6ddd9b;
+$card-cap-bg: #7cc097;
 
-
-// Create your own color map
-$custom-colors: (
-    "tertiary": $black,
-    "quaternary": $indigo,
-);
-
-// Merge with "$theme-colors" map
-$theme-colors: map-merge($theme-colors, $custom-colors);
 
 // Configuration
 @import "../bootstrap/scss/functions";
 @import "../bootstrap/scss/variables";
 @import "../bootstrap/scss/mixins";
 
+// Create your own color map
+$custom-colors: (
+    "tertiary": $teal,
+    "quaternary": $red
+    );
+    
+// Merge with "$theme-colors" map
+$theme-colors: map-merge($theme-colors, $custom-colors);    
+
+$font-family-base: 'Roboto', sans-serif;
+
+.custom-border {
+    border: 2px solid $red
+}
+    
 // Layout & components
 @import "../bootstrap/scss/root";
 @import "../bootstrap/scss/reboot";
